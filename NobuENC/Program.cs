@@ -36,7 +36,7 @@ namespace NobuENC
                         Decrypt(text, hash);
                         break;
                     default:
-                        Console.WriteLine("Error: Didnt write appropriate response, Closing Application");
+                        Console.WriteLine("Error: Didnt write appropriate response, Aborting En/Decryption");
                         break;
                 }
 
@@ -49,6 +49,10 @@ namespace NobuENC
                     Cont = true;
                 }
                 else if(contine == "No" || contine == "no")
+                {
+                    Cont = false;
+                }
+                else
                 {
                     Cont = false;
                 }
